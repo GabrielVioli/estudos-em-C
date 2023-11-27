@@ -37,17 +37,24 @@ int main() {
     }
 
     char senha[20];
+    int cont = 0;
 
     printf("senha: ");
     scanf("%s", senha);
 
     if(strcmp(senha, code) != 0) {
-        printf("senha incorreta");
+        printf("senha incorreta\n");
 
         while (strcmp(senha, code) != 0)
         {
+            printf("senha incorreta, tente novamente\n");
             printf("senha: ");
             scanf("%s", senha);
+            cont++;
+            if(cont > 5) {
+                printf("excesso de tentativas");
+                break;
+            }
             
             if(strcmp(senha, code) == 0) {
                 printf("Sucesso!");
