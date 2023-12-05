@@ -27,19 +27,13 @@ typedef struct type_people type_people;
 
 int main() {
 
-    char modelo[50];
-    float peso;
-    int ano;
-    char nome[50];
     
-    type_car carro1 = {modelo, peso, ano, nome};
+
+    type_car carro1 = {"fiesta", 900, 2004, "gabriel"};
     type_people pessoa1 = {92, 2004, "fiesta"};
     personal_data dados_pessoais = {"gabriel", 18, 14, 0};
 
-
-
-    scanf("%s %f %d %s", modelo, &peso, &ano, nome);
-
+    strcpy(carro1.nome_dono, "joao");
 
     printf("carro:%s %f %d %s\n", carro1.modelo, carro1.peso, carro1.ano, carro1.nome_dono);
     printf("Proprietario:%f %d %s\n", pessoa1.peso, pessoa1.idade, pessoa1.carro);
