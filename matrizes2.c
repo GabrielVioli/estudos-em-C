@@ -13,10 +13,11 @@ int main() {
             printf("%d ", mat[conti][contj]);
             contj++;
         }
-        contj = 0; // Reinicia contj para a próxima iteração da dimensão conti
+        contj = 0;
         conti++;
         printf("\n");
     }
 
     return 0;
 }
+

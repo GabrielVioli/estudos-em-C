@@ -1,15 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() { 
 
-    int i; int cont = 0;
+    int contador = 1;
+    int fatorial = 1;
+    int entrada_usuario;
 
     printf("numero: ");
-    scanf("%d", &i);
-    
-    for(i; cont != 11; cont++) {
-        printf("%d x %d = %d\n", i , cont, i * cont);
+    scanf("%d", &entrada_usuario);
+
+    for(contador; contador <= entrada_usuario; contador++) {
+        fatorial = fatorial * contador;
     }
 
+    printf("%d", fatorial);
+
+
+    
 }
